@@ -1,4 +1,6 @@
-## Simple webpack setup
+# TypeScript with React and Webpack project sample
+
+## Webpack setup
 Let's set up a simple webpack starter project.
 
 Create a folder:\
@@ -62,7 +64,7 @@ Add:\
 And start the app:\
 `npm start`
 
-## Setting up TypeScrpt using ts-loader
+## Setting up TypeScript using `ts-loader`
 
 Install the TypeScipt compiler and the ts-loader webpack loader as dev dependencies:\
 `npm i -D typescript ts-loader`
@@ -100,4 +102,28 @@ module.exports = {
     },
 ```
 
+## Adding React
 
+Intall `react` and `react-dom` as normal dependencies:\
+`npm i -S react react-dom`
+
+React doesn't include type definitions so we have to installed them from the types repo as dev dependencies:\
+`npm i -D @types/react @types/react-dom`
+
+By default TypeScript doesn't understand `jsx` syntax and doesn't know how to handle it by default.\
+We can add an option to the compile options in `tsconfig.json` to enable it:\
+`"jsx": "react"`
+
+
+
+## Adding a source map
+We can tell webpack to autogenerate a map which the browser can use to map the error location in the code it executes (js) to the location in the original source file (.tx, .tsx).\
+A source map allows the browser to map a line number from compiled code to the line number from the source code.
+
+The simplest way to enable source map geneartion in webpack is to use the `devtool` option.
+In `webpack.config.js`: 
+```
+ devtool: "eval-source-map"
+```
+Also, if using `ts-loader` instead of `babel-loader` add the following in `tsconfig.json`:\
+`"sourceMap": true`

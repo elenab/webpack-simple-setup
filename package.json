@@ -1,7 +1,7 @@
 {
-  "name": "react-plus-typescript",
+  "name": "react-typescript-simple-seup",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Webpack setup Let's set up a simple webpack starter project.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -10,11 +10,26 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
     "html-webpack-plugin": "^4.4.1",
     "ts-loader": "^8.0.3",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tsc": "^1.20150623.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elenab/webpack-simple-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elenab/webpack-simple-setup/issues"
+  },
+  "homepage": "https://github.com/elenab/webpack-simple-setup#readme"
 }
